@@ -1,0 +1,50 @@
+{% extends "base.html" %}{% block title%}What To Do ?{% endblock%}
+{%block content%}
+<h1 align="center" style="margin-top: 20px;color:#25A0D3;">What to do ?</h1>
+<!--<ul class="list-group list-group-flush" id="wallofhobbies">
+    {%for i in all_hobbies%}
+    <li class="list-group-item">{{ i.data}}
+
+    </li>
+    {% endfor%}
+</ul>-->
+
+
+
+<div id="test">
+{%for i in zoradovaci_zoznam%}
+
+    <form method="POST" id="hobby{{i.id}}">
+        <div class="card" style="width: 33rem;margin: auto; margin-top:20px;border-radius: 20px;background-color: #25A0D3;" align="left" >
+
+          <div class="card-body">
+
+              <h5 class="card-title">{{ i.title }}</h5>
+
+
+              <p class="card-text" >{{i.data}}</p>
+
+
+              <!--<a href="https://www.google.com/{{i.title}}" class="btn btn-primary" style="background-color: #D6D3D3;color: black;font-weight:500;">Learn more</a><br>-->
+
+          </div>
+          <div class="card-body">
+              <button id="idecko" name="idecko" type="submit" value="{{i.id}}"
+                      style="opacity: 1;border-radius: 20px;position: absolute;right: 2px;bottom: 2px;width:99%;background-color:#1AADEA;" >
+                  <p id="likes">&#9787;{{i.likes}}</p>
+              </button>
+          </div>
+
+        </div>
+    </form>
+
+ {% endfor%}
+</div>
+
+
+
+
+
+
+{%endblock%}
+

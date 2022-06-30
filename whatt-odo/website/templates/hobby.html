@@ -1,0 +1,20 @@
+{% extends "base.html" %}{% block title%}Hobby{% endblock%}
+{%block content%}
+<h1 align="center" style="margin-top: 20px;color:#25A0D3;">Share Your Hobby!</h1>
+
+
+
+<form method="POST">
+    <div class="form-group">
+    <label for="exampleFormControlInput1" style="font-weight:500;color:#25A0D3;">Title</label>
+    <input class="form-control" id="hobbytitle" name="hobbytitle" placeholder="Books, Sports, Arts ...">
+  </div>
+    <label for="exampleFormControlInput2" style="font-weight:500;color:#25A0D3;">Description</label>
+    <textarea placeholder="..." name="hobby" id="hobby" class="form-control"></textarea>
+    <div align="center">
+        <br>
+        <button type="submit" class="btn btn-primary" style="background-color: #25A0D3;color:black;font-weight:500;">Add Hobby</button>
+
+    </div>
+</form>
+{%endblock%}

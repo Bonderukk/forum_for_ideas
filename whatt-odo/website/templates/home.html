@@ -1,0 +1,23 @@
+{% extends "base.html" %}{% block title%}Check List{% endblock%}
+{%block content%}
+<h1 align="center" style="margin-top: 20px;color:#25A0D3;">Check List</h1>
+<ul class="list-group list-group-flush" id="notes">
+    {% for note in user.notes %}
+    <li class="list-group-item" style="border-radius: 20px;margin-bottom:10px;">{{ note.data }}
+        <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <!--<span aria-hidden="true">&#10003;</span>-->
+    </li>
+
+    {% endfor%}
+</ul>
+<form method="POST">
+    <textarea name="note" id="note" class="form-control" style="border-radius:20px;"></textarea>
+    <div align="center">
+        <br>
+        <button type="submit" class="btn btn-primary" style="background-color: #25A0D3;color:black;font-weight:500;">Add Note</button>
+
+    </div>
+</form>
+{%endblock%}

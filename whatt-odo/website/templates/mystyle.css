@@ -1,0 +1,8 @@
+#test {
+  display: flex;
+  /* Optional, if you want the DIVs 100% width: */
+  flex-direction: column;
+}
+#flex > #a { order: 2; }
+#flex > #b { order: 1; }
+#flex > #c { order: 3; }
