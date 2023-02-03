@@ -10,3 +10,4 @@ TECHNOLOGIES:
 - python
 - html, css
 
+<img width="949" alt="image" src="https://user-images.githubusercontent.com/85396481/216589138-a95e07df-5017-426c-8243-ed1e2a2671fa.png">
